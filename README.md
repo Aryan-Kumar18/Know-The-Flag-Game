@@ -2,6 +2,8 @@
 
 **Know The Flag** is a fun and educational web-based game that challenges players to identify the correct country flag from four emoji-style options. It supports both single-player and local multiplayer modes with score tracking and a sleek dark UI.
 
+🔗 [View Live Website/Play here ](https://know-the-flag-game.netlify.app/)
+
 ## 🎮 Features
 
 - 🎌 **Country Flag Guessing**: Guess the correct flag emoji based on a random country name.
