@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #1c1c1c, #2c2c2c);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.start-screen, .game-screen, .multiplayer-screen {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.btn {
+  padding: 15px 30px;
+  background: #1f6feb;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.btn:hover {
+  background: #388bfd;
+  transform: scale(1.05);
+}
+
+.flag-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(100px, 140px));
+  gap: 15px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.flag-btn {
+  font-size: 2rem;
+  background: white;
+  color: black;
+  border-radius: 10px;
+  padding: 15px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.flag-btn:hover {
+  background: #ffd700;
+  transform: scale(1.1);
+}
+
+.score, .message, .timer, .high-score {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.game-over-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.game-over-text {
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px black;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.bottom-right {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  font-size: 1rem;
+  opacity: 0.7;
+  animation: float 2s infinite;
+  z-index: 999;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.top-controls {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.player-container {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.player-box {
+  border: 2px solid #444;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 100%;
+  width: 320px;
+  background: #1e1e1e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 700px) {
+  .player-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
